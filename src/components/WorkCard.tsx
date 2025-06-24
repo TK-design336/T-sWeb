@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import styles from './WorkCard.module.css';
 import { useState } from 'react';
 
@@ -23,13 +22,14 @@ export default function WorkCard({ work }: { work: Work }) {
     >
       <div className={styles.imageWrap}>
         {!imgError ? (
-          <Image 
-            src={work.image} 
-            alt={work.title} 
-            width={320} 
-            height={180} 
-            className={styles.image} 
+          <img
+            src={work.image}
+            alt={work.title}
+            width={320}
+            height={180}
+            className={styles.image}
             onError={() => setImgError(true)}
+            style={{ objectFit: 'cover', borderRadius: '0.5rem 0.5rem 0 0' }}
           />
         ) : (
           <div className={styles.noImage}>No Image</div>
