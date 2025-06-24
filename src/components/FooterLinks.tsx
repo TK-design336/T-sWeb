@@ -2,7 +2,7 @@ import styles from './FooterLinks.module.css';
 import Image from 'next/image';
 
 const links = [
-  { label: 'X', href: 'https://x.com/', icon: '/icons/x.logo.svg', size: 32 },
+  { label: 'X', href: 'https://x.com/doeleastasset/', icon: '/icons/x.logo.svg', size: 32 },
   { label: 'YouTube', href: 'https://youtube.com/', icon: '/icons/youtube.logo.png', size: 40 },
   { label: 'Gumroad', href: 'https://gumroad.com/', icon: '/icons/gumroad.logo.svg', size: 40 },
   { label: 'Mail', href: 'mailto:example@mail.com', icon: '/icons/mail.logo.svg', size: 40 },
