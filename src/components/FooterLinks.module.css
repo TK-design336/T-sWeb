@@ -1,0 +1,26 @@
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  background: rgba(255,255,255,0.7);
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.iconLink {
+  font-size: 2rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.iconLink:hover, .iconLink:focus {
+  color: #0070f3;
+}
+.icon {
+  vertical-align: middle;
+} 

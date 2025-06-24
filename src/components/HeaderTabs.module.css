@@ -1,0 +1,22 @@
+.headerTabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0 1rem 0;
+  background: rgba(79, 79, 79, 0.5);
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.tab {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ededed;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+}
+.tab:hover, .tab:focus {
+  background: #616161;
+  color: #fff;
+} 
