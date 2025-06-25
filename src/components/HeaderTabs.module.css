@@ -1,11 +1,55 @@
 .headerTabs {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 2rem;
   padding: 2rem 0 1rem 0;
-  background: rgba(79, 79, 79, 0.5);
+  background: rgba(40,40,40,0.85);
   border-radius: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1000;
+}
+.logoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  text-decoration: none;
+  transition: box-shadow 0.2s;
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.logoButton:hover, .logoButton:focus {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+.logoText {
+  color: #222;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Geist', 'Arial', sans-serif;
+  user-select: none;
+}
+.tabsWrap {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
 }
 .tab {
   font-size: 1.25rem;
@@ -19,4 +63,82 @@
 .tab:hover, .tab:focus {
   background: #616161;
   color: #fff;
+}
+@media (max-width: 700px) {
+  .tabsWrap {
+    display: none;
+  }
+  .menuButton {
+    display: flex;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 0.7rem;
+    z-index: 11;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+  }
+  .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .mobileMenu {
+    position: absolute;
+    top: 100%;
+    right: 1.2rem;
+    background: rgba(40,40,40,0.97);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+    min-width: 200px;
+    animation: fadeIn 0.2s;
+  }
+  .mobileTab {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mobileTab:hover, .mobileTab:focus {
+    background: #222;
+    color: #fff;
+  }
+  .logoButton {
+    left: 0.5rem;
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  .logoIcon {
+    width: 28px;
+    height: 28px;
+  }
+  .headerTabs {
+    padding: 1.2rem 0 0.7rem 0;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 } 
