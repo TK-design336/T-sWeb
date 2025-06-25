@@ -59,10 +59,22 @@
   padding: 0.5rem 1.5rem;
   border-radius: 0.75rem;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .tab:hover, .tab:focus {
   background: #616161;
   color: #fff;
+}
+.tabSub {
+  display: block;
+  font-size: 0.85em;
+  color: #bdbdbd;
+  margin-top: 0.1em;
+  line-height: 1.1;
 }
 @media (max-width: 700px) {
   .tabsWrap {
@@ -136,6 +148,13 @@
   }
   .headerTabs {
     padding: 1.2rem 0 0.7rem 0;
+  }
+  .tabSub {
+    display: inline;
+    font-size: 1em;
+    color: #ededed;
+    margin-top: 0;
+    margin-left: 0.2em;
   }
 }
 @keyframes fadeIn {

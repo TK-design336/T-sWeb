@@ -4,10 +4,10 @@ import styles from './HeaderTabs.module.css';
 import { useState } from 'react';
 
 const tabs = [
-  { label: 'Blender Works (Geometry Node Tools)', href: '/blender-tools' },
-  { label: 'Blender Works (Models)', href: '/blender-models' },
+  { label: 'Blender Works', sub: 'Geometry Node Tools', href: '/blender-tools' },
+  { label: 'Blender Works', sub: 'Models', href: '/blender-models' },
   { label: 'Movie Works', href: '/movies' },
-  { label: 'Others', href: '/others' },
+  { label: 'Other Works', href: '/others' },
 ];
 
 export default function HeaderTabs() {
@@ -26,6 +26,9 @@ export default function HeaderTabs() {
         {tabs.map(tab => (
           <Link key={tab.href} href={tab.href} className={styles.tab}>
             {tab.label}
+            {tab.sub && (
+              <span className={styles.tabSub}>(<span>{tab.sub}</span>)</span>
+            )}
           </Link>
         ))}
       </div>
@@ -51,6 +54,7 @@ export default function HeaderTabs() {
               onClick={() => setMenuOpen(false)}
             >
               {tab.label}
+              {tab.sub && ` (${tab.sub})`}
             </Link>
           ))}
         </div>

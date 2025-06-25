@@ -1,0 +1,134 @@
+body {
+  background: #BFB9B0;
+}
+
+.othersPage {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem 1rem;
+  position: relative;
+  z-index: 1;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.othersBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: #BFB9B0;
+  /* 太めの方眼用紙調点線パターン */
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 17px, #fff 18.5px, transparent 18px, transparent 12px),
+    repeating-linear-gradient(135deg, transparent, transparent 17px, #fff 18.5px, transparent 18px, transparent 12px);
+  background-size: 38px 38px;
+  opacity: 1;
+}
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #424242;
+  text-align: center;
+}
+.articleSection {
+  margin-bottom: 2rem;
+}
+.articleTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.articleDesc {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+.articleList {
+  margin: 1.2rem 0 1.2rem 1.5rem;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.cardCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  margin: 2.5rem 0 2.5rem 0;
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin: 2.5rem 0 2.5rem 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.97);
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  overflow: hidden;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.15s, box-shadow 0.15s;
+  width: 420px;
+  max-width: 95vw;
+  min-height: 320px;
+}
+.card:hover, .card:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+}
+.cardImageWrap {
+  width: 100%;
+  height: 200px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.cardInfo {
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  width: 100%;
+}
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 0.7rem 0;
+}
+.cardDesc {
+  font-size: 1.05rem;
+  color: #555;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .cardCenter {
+    margin: 1.2rem 0 1.2rem 0;
+  }
+  .card {
+    width: 98vw;
+    min-height: 220px;
+  }
+  .cardImageWrap {
+    height: 130px;
+  }
+} 
