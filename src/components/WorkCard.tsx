@@ -8,7 +8,7 @@ type Work = {
   desc: string;
   image: string;
   href: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export default function WorkCard({ work }: { work: Work }) {
