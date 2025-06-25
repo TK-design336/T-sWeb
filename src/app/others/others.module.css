@@ -1,13 +1,18 @@
-/* body {
+body {
   background: #BFB9B0;
-} */
+  /* 太めの方眼用紙調点線パターン */
+  /*background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 17px, #fff 18.5px, transparent 18px, transparent 12px),
+    repeating-linear-gradient(135deg, transparent, transparent 17px, #fff 18.5px, transparent 18px, transparent 12px);
+  background-size: 38px 38px;*/
+}
 
 .othersPage {
   max-width: 900px;
   margin: 0 auto;
   padding: 2.5rem 1rem 3rem 1rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: none;
   border-radius: 0;
   box-shadow: none;
@@ -19,14 +24,13 @@
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  pointer-events: none;
   background: #BFB9B0;
   /* 太めの方眼用紙調点線パターン */
-  background-image:
+  /*background-image:
     repeating-linear-gradient(45deg, transparent, transparent 17px, #fff 18.5px, transparent 18px, transparent 12px),
     repeating-linear-gradient(135deg, transparent, transparent 17px, #fff 18.5px, transparent 18px, transparent 12px);
-  background-size: 38px 38px;
-  opacity: 1;
+  background-size: 38px 38px;*/
+  opacity: 0.99;
 }
 .title {
   font-size: 2rem;
@@ -83,6 +87,7 @@
   width: 420px;
   max-width: 95vw;
   min-height: 320px;
+  z-index: 1;
 }
 .card:hover, .card:focus {
   transform: translateY(-4px) scale(1.03);

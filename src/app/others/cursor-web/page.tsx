@@ -1,5 +1,6 @@
 'use client';
 import styles from './cursor-web.module.css';
+import othersStyles from '../others.module.css';
 import { useState } from 'react';
 
 const images = [
@@ -12,6 +13,7 @@ export default function CursorWebPage() {
   const [imgIndex, setImgIndex] = useState(0);
   return (
     <div className={styles.detailRoot}>
+      <div className={othersStyles.othersBg} />
       <div className={styles.detailBox}>
         <h1 className={styles.title}>Cursorを用いたWebページ制作と実装</h1>
         <div className={styles.editDate}>最終編集日: 2024-06-25</div>

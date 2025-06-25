@@ -25,7 +25,7 @@ export default function Home() {
         playsInline
       />
       <div className={styles.bgOverlay} />
-      <h1 className={styles.title}>T's Works</h1>
+      <h1 className={styles.title}>T&#39;s Works</h1>
       <h2 className={styles.latest}>Latest Works</h2>
       <div className={styles.cardGrid}>
         {latestWorks.map(work => (
