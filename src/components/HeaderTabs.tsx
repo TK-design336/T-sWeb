@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import styles from './HeaderTabs.module.css';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const tabs = [
   { label: 'Blender Works', sub: 'Geometry Node Tools', href: '/blender-tools' },
@@ -12,6 +13,7 @@ const tabs = [
 
 export default function HeaderTabs() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   return (
     <nav className={styles.headerTabs}>
       <Link href="/" className={styles.logoButton} aria-label="トップページ">
@@ -23,14 +25,21 @@ export default function HeaderTabs() {
         </span>
       </Link>
       <div className={styles.tabsWrap}>
-        {tabs.map(tab => (
-          <Link key={tab.href} href={tab.href} className={styles.tab}>
-            {tab.label}
-            {tab.sub && (
-              <span className={styles.tabSub}>(<span>{tab.sub}</span>)</span>
-            )}
-          </Link>
-        ))}
+        {tabs.map(tab => {
+          const isActive = pathname === tab.href || pathname.startsWith(tab.href + "/");
+          return (
+            <Link
+              key={tab.href}
+              href={tab.href}
+              className={styles.tab + (isActive ? ' ' + styles.activeTab : '')}
+            >
+              {tab.label}
+              {tab.sub && (
+                <span className={styles.tabSub}>(<span>{tab.sub}</span>)</span>
+              )}
+            </Link>
+          );
+        })}
       </div>
       <button
         className={styles.menuButton}

@@ -10,6 +10,7 @@ const othersArticles = articles
 export default function OthersPage() {
   return (
     <div className={styles.othersPage}>
+      <div className={styles.othersPageBg} />
       <h1 className={styles.title}>Other Works</h1>
       <div className={othersArticles.length === 1 ? styles.cardCenter : styles.cardGrid}>
         {othersArticles.map(article => (
