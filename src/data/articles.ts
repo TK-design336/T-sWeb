@@ -30,6 +30,16 @@ export const articles = [
     updated: "2024-06-15"
   },
   {
+    id: "movie-2",
+    tag: "movies",
+    title: "FGOスカサハ自作モデルでモーション作成",
+    desc: "自作3Dモデルを使ったFGOスカサハのモーション動画です。",
+    body: `FGOスカサハの自作3DモデルをBlenderで作成し、モーションを付けてYouTubeに投稿しました。ぜひご覧ください。`,
+    images: ["https://img.youtube.com/vi/P2PpuIumfNw/hqdefault.jpg"],
+    href: "https://youtu.be/P2PpuIumfNw",
+    updated: "2024-06-27"
+  },
+  {
     id: "other-1",
     tag: "others",
     title: "Cursorを用いたWebページ制作と実装",

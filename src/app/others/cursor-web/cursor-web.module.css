@@ -6,6 +6,7 @@
   padding: 0;
   position: relative;
   z-index: 1;
+  background: #BDB7AE;
 }
 .detailBox {
   background: rgba(255,255,255,0.97);
